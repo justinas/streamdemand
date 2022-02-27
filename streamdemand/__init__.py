@@ -1,7 +1,8 @@
-from flask import Flask, abort, redirect, url_for
+from flask import Flask, abort, redirect
 import streamlink
 
 app = Flask(__name__)
+
 
 @app.route("/_/<path:stream_url>")
 def stream(stream_url):
