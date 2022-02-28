@@ -1,4 +1,4 @@
-from flask import Flask, abort, redirect
+from flask import Flask, abort, redirect, request
 import streamlink
 
 app = Flask(__name__)
@@ -8,6 +8,9 @@ app = Flask(__name__)
 def stream(stream_url):
     if not stream_url.startswith('http'):
         stream_url = f"https://{stream_url}"
+
+    if request.query_string:
+        stream_url += f"?{request.query_string.decode('utf-8')}"
 
     streams = streamlink.streams(stream_url)
     if not streams:
