@@ -183,7 +183,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "streamlink"
-version = "3.1.1+17.g783b1e1"
+version = "3.1.1+16.g1c0164c"
 description = "Streamlink is a command-line utility that extracts streams from various services and pipes them into a video player of choice."
 category = "main"
 optional = false
@@ -201,9 +201,9 @@ websocket-client = ">=1.2.1,<2.0"
 
 [package.source]
 type = "git"
-url = "https://github.com/justinas/streamlink"
-reference = "add-plugin-lnk"
-resolved_reference = "783b1e103b8a8561a1f6847b4010b768a2342374"
+url = "https://github.com/streamlink/streamlink"
+reference = "1c0164c6bf3f1f3ad0cc7de8e04eed08a8f2ee50"
+resolved_reference = "1c0164c6bf3f1f3ad0cc7de8e04eed08a8f2ee50"
 
 [[package]]
 name = "urllib3"
@@ -245,7 +245,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "ec3d69e874404aade46d99a17a3b1720eea13409223dbd6553d83dfdec53e10b"
+content-hash = "cd83f2c1bb7d730d828956234b540b23678e26a42a23add43b8af7e29974d2ae"
 
 [metadata.files]
 certifi = [
