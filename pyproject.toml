@@ -8,7 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.9"
 Flask = "^2.0"
-streamlink = { git = "https://github.com/justinas/streamlink", branch = "add-plugin-lnk" }
+streamlink = "^3.2"
 gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
