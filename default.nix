@@ -7,6 +7,10 @@ let app = poetry2nix.mkPoetryApplication {
     pytest = super.pytest.overridePythonAttrs (_: {
       doCheck = false; # unit tests take too long to execute
     });
+
+    streamlink = super.streamlink.overrideAttrs (old: {
+      buildInputs = old.buildInputs ++ [ super.setuptools ];
+    });
   });
 };
 in app.dependencyEnv
