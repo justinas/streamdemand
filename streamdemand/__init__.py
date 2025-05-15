@@ -20,4 +20,7 @@ def stream(stream_url):
     if not streams:
         abort(404, f"No streams found for {stream_url}")
 
-    return redirect(streams['best'].url)
+    stream = streams["best"]
+    multivariant = getattr(stream, "multivariant", None)
+    url = multivariant.uri if multivariant else stream.url
+    return redirect(url)
