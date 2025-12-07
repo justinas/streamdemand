@@ -1,21 +1,22 @@
-[tool.poetry]
+[project]
 name = "streamdemand"
 version = "0.1.0"
 description = ""
-authors = ["Justinas Stankevicius <justinas@justinas.org>"]
+authors = [{ name = "Justinas Stankevicius", email = "justinas@justinas.org" }]
+requires-python = "~=3.12"
 license = "MIT"
+dependencies = [
+    "Flask~=2.0",
+    "streamlink~=8.0",
+    "gunicorn>=20.1.0,<21",
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-Flask = "^2.0"
-streamlink = "^8.0"
-gunicorn = "^20.1.0"
+[tool.uv]
 
-# https://github.com/python-poetry/poetry/issues/9293#issuecomment-2048205226
-[[tool.poetry.source]]
+[[tool.uv.index]]
 name = "pypi-public"
 url = "https://pypi.org/simple/"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
