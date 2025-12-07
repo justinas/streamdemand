@@ -6,12 +6,10 @@ authors = ["Justinas Stankevicius <justinas@justinas.org>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.12"
 Flask = "^2.0"
-streamlink = "^7.0"
+streamlink = "^8.0"
 gunicorn = "^20.1.0"
-
-[tool.poetry.dev-dependencies]
 
 # https://github.com/python-poetry/poetry/issues/9293#issuecomment-2048205226
 [[tool.poetry.source]]
